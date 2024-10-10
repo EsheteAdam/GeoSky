@@ -18,15 +18,14 @@
         rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
         rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px,
         rgba(0, 0, 0, 0.1) 0px 100px 100px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+
     padding: 15px 20px; /* ריווח פנימי לנאבאר */
 }
 
 .navbar-brand {
     font-family: "Protest Guerrilla", sans-serif; /* פונט ייחודי */
     font-weight: 900; /* משקל טקסט עבה */
-    font-size: 32px; /* גובה הטקסט */
+    font-size: 50px; /* גובה הטקסט */
     letter-spacing: 3.5px; /* רווח בין האותיות */
     color: #2a2a2a; /* צבע טקסט */
     animation-name: slideInLeftLogo; /* אנימציה בעת עליית הדף */
@@ -81,30 +80,53 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* צל חזק יותר */
 }
 .custom-btn {
-    color: #28a745; /* צבע טקסט */
-    border: 2px solid #28a745; /* צבע גבול */
-    background-color: transparent; /* רקע שקוף */
-    padding: 8px 20px; /* רווח פנימי */
-    font-size: 16px; /* גובה טקסט */
-    font-weight: bold; /* טקסט עבה */
-    border-radius: 5px; /* קצוות מעוגלים */
-    transition: all 0.3s ease-in-out; /* מעבר חלק */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* צל חלש ראשוני */
+    color: #2a2a2a; /* צבע טקסט */
+    font-size: 18px; /* גובה הטקסט של הלינקים */
+    font-weight: bolder; /* משקל טקסט עבה יותר */
+    padding: 10px 15px; /* רווחים מסביב לטקסט */
+    letter-spacing: 1.5px; /* ריווח בין האותיות */
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* מעבר חלק */
+    border-radius: 10px; /* קצוות מעוגלים */
+    margin: 0 14px; /* רווחים בין לינקים */
     font-family: "Varela Round", sans-serif; /* פונט */
-    letter-spacing: 0.5px;
 }
 
 .custom-btn:hover {
-    background-color: #28a745; /* רקע ירוק בזמן ריחוף */
-    color: #fff; /* טקסט לבן בזמן ריחוף */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* צל חזק יותר בזמן ריחוף */
-    transform: translateY(-3px); /* תזוזה קלה למעלה בזמן ריחוף */
+    color: white; /* צבע טקסט בזמן ריחוף */
+    transform: scale(1.05); /* הגדלה קלה של האלמנט */
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.6); /* הוספת צל חזק יותר בזמן ריחוף */
+    background-color: rgba(
+        88,
+        137,
+        157,
+        0.5
+    ); /* רקע רך בזמן ריחוף, מבלי להגדיל את האלמנט */
 }
 
 .custom-btn:active {
-    background-color: #1e7e34; /* צבע רקע ירוק כהה יותר בזמן לחיצה */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* צל מוחלש בזמן לחיצה */
-    transform: translateY(0px); /* החזרת הכפתור למצבו הרגיל */
+    color: #ffffff; /* צבע טקסט כאשר לוחצים */
+    transform: scale(0.95); /* הקטנה קלה של האלמנט */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* צל חזק יותר */
+}
+.form-control {
+    border-radius: 25px; /* עיגול פינות */
+    padding: 10px 20px; /* ריווח פנימי */
+    font-size: 16px; /* גודל טקסט */
+    color: #2a2a2a; /* צבע טקסט */
+    background-color: #f9f9f9; /* צבע רקע */
+    transition: all 0.3s ease; /* מעבר חלק */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* הוספת צל */
+}
+
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(91, 91, 91, 0.5);
+    outline: none;
+    background-color: #ffffff;
+}
+
+.form-control::placeholder {
+    color: #999; /* צבע לטקסט של ה-placeholder */
+    font-family: "Varela Round", sans-serif; /* פונט */
 }
 
 /* -------------------- End Navbar Styles  -------------------- */
