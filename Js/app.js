@@ -5,7 +5,7 @@ import {
 } from "./apiReq.js";
 
 const init = async () => {
-    await getCountriesByLanguage('english'); // או שפה אחרת לפי בחירה
+    await getAllCountries(); // או שפה אחרת לפי בחירה
 };
 
 const renderCountries = (countries) => {
