@@ -7,6 +7,7 @@ const problematicCities = [
     { name: "Papeetē", lat: -17.5333, lon: -149.5667 },
     { name: "St. Peter Port", lat: 49.465, lon: -2.533 },
     { name: "Fakaofo", lat: -9.165, lon: -171.182 },
+    { name: "King Edward Point", lat: -54.2833, lon: -36.5 }, // Adding King Edward Point
 ];
 
 const getCountryLanguages = (languages) =>
