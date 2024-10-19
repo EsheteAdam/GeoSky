@@ -42,7 +42,8 @@ export default class CountryClass {
     // Method to render the country card
     renderCard(parentElement) {
         const card = document.createElement("div");
-        card.classList.add("card", "m-3"); // Adding Bootstrap classes for styling
+        card.classList.add("card", "m-3");
+
         card.innerHTML = `
             <img src="${this.countryFlag}" alt="${
             this.countryName
@@ -75,7 +76,7 @@ export default class CountryClass {
             </div>
         `;
 
-        // Append the card to the specified parent element
         parentElement.appendChild(card);
+        return card; // Return the card element if needed for further use
     }
 }
