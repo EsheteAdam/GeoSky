@@ -34,6 +34,8 @@ export const fetchAllCountries = async () => {
                     weatherData = await getWeatherData(capital);
                 }
 
+                console.log(`${country.name.common} weather:`, weatherData); // Debug log
+
                 return {
                     name: country.name.common,
                     flag: country.flags?.png,
@@ -44,14 +46,13 @@ export const fetchAllCountries = async () => {
                     languages: country.languages
                         ? Object.values(country.languages)
                         : ["N/A"],
-                    borders: country.borders || ["None"],
                     currency: country.currencies
-                        ? Object.values(country.currencies)[0].name
+                        ? Object.values(country.currencies)[0]?.name
                         : "N/A",
                     currencySymbol: country.currencies
-                        ? Object.values(country.currencies)[0].symbol
+                        ? Object.values(country.currencies)[0]?.symbol
                         : "N/A",
-                    weatherData,
+                    weatherData, // This must not be null
                 };
             })
         );
